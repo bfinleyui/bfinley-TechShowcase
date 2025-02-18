@@ -1,0 +1,46 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+
+    font-weight: bold;
+}
+
+body {
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.albumSelect, .freeSearch {
+    width: 33%;
+    margin:auto;
+    text-align: center;
+    background-color: #CCC;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding:10px;
+}
+
+.submitButton {
+    width: 33%;
+    margin:auto;
+    text-align: center;
+    background-color: #CCC;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding:10px;
+}
+
+#submitButton {
+    margin-top:10px;
+}

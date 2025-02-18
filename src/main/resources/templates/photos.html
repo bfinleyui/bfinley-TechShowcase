@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="/css/displayPage.css"/>
+
+</head>
+<body>
+<div class="topNav">
+    <span class="homeLink">
+        <a href="/">back to main page</a>
+    </span>
+    <span class="searchReminder" th:text="${searchReminder}"></span>
+</div>
+
+<div class="imageResults">
+    <th:block th:each="photo : ${photos}">
+        <div class="imageDisplay">
+            <span class="photoId" th:text="'Photo id:' + ${photo.photoId}"></span>
+            <span class="photoTitle" th:text="${photo.title}"></span>
+            <span class="albumNumber" th:text="'Album id:' + ${photo.albumId}"></span>
+            <img th:src="${photo.url}" class="insideBoxDisplay" th:alt="${photo.title}"/>
+        </div>
+
+    </th:block>
+</div>
+</body>
+
+</html>

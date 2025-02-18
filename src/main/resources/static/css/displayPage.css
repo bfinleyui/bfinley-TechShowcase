@@ -1,0 +1,65 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+    color: #FFF;
+    font-weight: bold;
+}
+
+.imageDisplay {
+    width:600px;
+    float:left;
+    margin-right: 10px;
+    position: relative;
+}
+
+.imageDisplay img {
+    width:100%;
+    height:auto;
+}
+
+.photoId {
+    position: absolute;
+    top:5px;
+    left:5px;
+    font-size:50%;
+}
+
+.photoTitle {
+    position: absolute;
+    bottom:5px;
+    font-size:100%;
+    left:5px;
+}
+
+.albumNumber {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 50%;
+
+}
+
+.topNav {
+    width: 100%;
+    background-color: #CCC;
+    overflow: hidden;
+    padding:5px;
+    margin-bottom: 10px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+
+}
+
+.imageResults {
+    margin-top:40px;
+}
+
+.homeLink {
+    display: inline;
+}
+
+.searchReminder {
+    position: absolute;
+    right: 30px;
+}
