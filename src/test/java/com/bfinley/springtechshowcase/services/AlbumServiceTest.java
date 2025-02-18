@@ -1,8 +1,10 @@
 package com.bfinley.springtechshowcase.services;
 
+import com.bfinley.springtechshowcase.utils.RequestHelper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
+import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.springframework.boot.test.context.TestComponent;
 
@@ -15,6 +17,8 @@ import static org.mockito.Mockito.when;
 @TestComponent
 class AlbumServiceTest {
 
+    @Mock
+    private RequestHelper requestHelper;
 
     @InjectMocks
     private AlbumService albumService;
@@ -27,7 +31,7 @@ class AlbumServiceTest {
 
     @Test
     void testGetAllAlbums() {
-        ArrayList<Long> mockAlbums = new ArrayList<>(Arrays.asList(1L, 2L));
+        ArrayList<Long> mockAlbums = new ArrayList<Long>(Arrays.asList(1L, 2L));
 
         when(albumService.getAllAlbums()).thenReturn(mockAlbums);
 
