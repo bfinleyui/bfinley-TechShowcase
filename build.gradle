@@ -2,14 +2,31 @@ plugins {
     id 'java'
     id 'org.springframework.boot' version '3.4.2'
     id 'io.spring.dependency-management' version '1.1.7'
+    id 'jacoco'
 }
 
 group = 'com.bfinley'
-version = '0.0.1-SNAPSHOT'
+version = '0.0.1'
+
+jacoco {
+    toolVersion = "0.8.12"
+}
+
+jacocoTestReport {
+    reports {
+        xml.required = true
+        html.required = true
+    }
+}
+
+test {
+    finalizedBy jacocoTestReport
+}
 
 java {
     toolchain {
         languageVersion = JavaLanguageVersion.of(21)
+        sourceCompatibility = JavaLanguageVersion.of(21)
     }
 }
 
@@ -35,6 +52,7 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
     implementation group: 'com.google.code.gson', name: 'gson', version: '2.12.1'
+    implementation group: 'org.jacoco', name: 'org.jacoco.core', version: '0.8.12'
 
 
 }

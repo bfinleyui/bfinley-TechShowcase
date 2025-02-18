@@ -1,6 +1,5 @@
 package com.bfinley.springtechshowcase.controllers;
 
-import com.bfinley.springtechshowcase.models.Album;
 import com.bfinley.springtechshowcase.models.Photo;
 import com.bfinley.springtechshowcase.services.AlbumService;
 import com.bfinley.springtechshowcase.services.PhotoService;
@@ -17,10 +16,6 @@ import java.util.List;
 
 @Controller
 public class MainController {
-
-    private ArrayList<Photo> photos;
-
-    private ArrayList<Album> albums;
 
     private String resultsReminder;
 

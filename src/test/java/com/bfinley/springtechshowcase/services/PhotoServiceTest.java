@@ -10,10 +10,8 @@ import org.mockito.MockitoAnnotations;
 import org.springframework.boot.test.context.TestComponent;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 @TestComponent
@@ -62,7 +60,7 @@ class PhotoServiceTest {
         assertEquals(2, mockPhotos.size());
 
         // Album 1 has the first photo with the proper title
-        assertEquals("Photo 1", mockPhotos.get(0).getTitle());
+        assertEquals("Photo 1", mockPhotos.getFirst().getTitle());
 
     }
 

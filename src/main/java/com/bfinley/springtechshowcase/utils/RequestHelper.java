@@ -82,7 +82,7 @@ public class RequestHelper {
                 .build();
 
 
-        HttpResponse<String> response = null;
+        HttpResponse<String> response;
         try {
             response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
@@ -103,13 +103,6 @@ public class RequestHelper {
 
     }
 
-    public AbstractMap<String, String> buildHeaders() {
-        return new HashMap<String, String>() {{
-            put("apiHeader", apiHeader);
-            put("apiKey", apiKey);
-            put("accept", "application/json");
-        }};
-    }
 
 
 }

@@ -11,13 +11,10 @@ import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
 import java.io.IOException;
-import java.lang.reflect.Type;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -37,7 +34,7 @@ import org.springframework.test.context.TestPropertySource;
         "com.bfinley.apiKey = lt_tech_showcase",
         "com.bfinley.apiBaseUrl = https://showcase.leantechniques.com"
 })
-
+@SuppressWarnings("unchecked")
 class RequestHelperTest {
 
     @Mock
@@ -72,7 +69,7 @@ class RequestHelperTest {
         // Make sure it's getting all 4 albums
         assertEquals(4, albums.size());
         // Make sure the sort works
-        assertEquals(1, albums.get(0).getAlbumId());
+        assertEquals(1, albums.getFirst().getAlbumId());
 
         // Other possible tests
         // Verify total number of photos
@@ -98,7 +95,7 @@ class RequestHelperTest {
         assertEquals(8, photos.size());
 
         // Make sure the sort works
-        assertEquals(2, photos.get(0).getPhotoId());
+        assertEquals(2, photos.getFirst().getPhotoId());
 
     }
 
