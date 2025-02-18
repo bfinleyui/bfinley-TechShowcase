@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -30,7 +29,7 @@ public class PhotoService {
         // I know the variable is redundant, but I like to keep it separate, especially if there's not a huge
         // performance hit, so I can debug easier
 
-        ArrayList<Photo> photosByAlbum = requestHelper.getByAlbumId(Long.valueOf(albumId));
+        ArrayList<Photo> photosByAlbum = requestHelper.getByAlbumId(albumId);
         return photosByAlbum;
     }
 
